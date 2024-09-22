@@ -20,14 +20,17 @@ public class Answer
 {
     static void CheckDivisibility(int firstNumber, int secondNumber)
     {
-        // Введите свое решение ниже
-        if (firstNumber % secondNumber == 0)
+       if (secondNumber == 0)
         {
-            Console.Write("Делится");
+            Console.WriteLine("На ноль делить нельзя");
         }
-        else
+       else if (firstNumber % secondNumber == 0)
         {
-            Console.Write("Не делится");
+            Console.WriteLine("делится");
+        }
+       else
+        {
+            Console.WriteLine("не делится");
         }
     }
     static public void Main(string[] args)
@@ -41,7 +44,7 @@ public class Answer
         else
         {
             firstNumber = 10;
-            secondNumber = 3;
+            secondNumber = 0;
         }
         CheckDivisibility(firstNumber, secondNumber);
     }
